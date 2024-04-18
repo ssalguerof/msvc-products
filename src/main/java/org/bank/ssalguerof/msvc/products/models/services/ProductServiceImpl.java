@@ -7,28 +7,31 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Implementación de ProductService para gestionar la información de productos bancarios.
+ */
 @Service
-public class ProductServiceImpl implements ProductService{
-    @Autowired
-    private ProductDao productDao;
+public class ProductServiceImpl implements ProductService {
+  @Autowired
+  private ProductDao productDao;
 
-    @Override
-    public Flux<Product> findAll() {
-        return productDao.findAll();
-    }
+  @Override
+  public Flux<Product> findAll() {
+    return productDao.findAll();
+  }
 
-    @Override
-    public Mono<Product> findbyId(String id) {
-        return productDao.findById(id);
-    }
+  @Override
+  public Mono<Product> findbyId(String id) {
+    return productDao.findById(id);
+  }
 
-    @Override
-    public Mono<Product> save(Product product) {
-        return productDao.save(product);
-    }
+  @Override
+  public Mono<Product> save(Product product) {
+    return productDao.save(product);
+  }
 
-    @Override
-    public Mono<Void> delete(Product product) {
-        return productDao.delete(product);
-    }
+  @Override
+  public Mono<Void> delete(Product product) {
+    return productDao.delete(product);
+  }
 }
