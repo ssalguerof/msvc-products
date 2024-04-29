@@ -15,6 +15,6 @@ public class CreditData {
   private Double saldoPendiente;    // Saldo pendiente del crédito
   private Integer cuotasPagadas;    // Número de cuotas pagadas
   private Integer cuotasTotales;    // Número total de cuotas del crédito
-
+  private String indVencido;       // Indica si el crédito está vencido
   // Métodos getter y setter generados automáticamente por Lombok
 }
